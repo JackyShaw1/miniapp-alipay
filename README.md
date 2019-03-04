@@ -1,2 +1,2 @@
 # miniapp-alipay
-this is vz mini-alipay demo 
+this is vz miniapp-alipay demo 
