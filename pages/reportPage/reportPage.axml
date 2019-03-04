@@ -1,0 +1,128 @@
+<view class="page" style="width: 100%;">
+  <view class="banner">
+    <view class="title-box">
+      <view class="companyName">{{dataObj.baseInfo.NSRMC}}</view>
+      <view class="report-title">信用报告</view>
+    </view>
+    <view class="rating-box">
+      <view>
+        <view class="quality-rating-title"> 信用等级</view>
+        <view class="quality-rating-value"> {{creditRating.rating}}</view>
+      </view>
+      <view>
+        <view class="quality-rating-title">释义</view>
+        <view class="quality-rating-value">{{creditRating.paraphrase}} </view>
+      </view>
+    </view>
+    <view class="instrument-panel">
+       <canvas
+          id="dashBored-chart"
+          width="{{width00}}" height="{{height00}}"
+        />
+    </view>
+  </view>
+  
+  <view class="container-wrap">
+    <view class="panel-block">
+      <view class="panel-title">
+        <image src="../../images/report-img/title-img01.png" mode="aspectFit" />
+      </view>
+      <view class="group-content">
+        <view class="group-item">
+          <view class="group-label"><text>企业名称</text></view>
+          <view class="group-value">{{dataObj.baseInfo.NSRMC}}</view>
+        </view>
+        <view class="group-item">
+          <view class="group-label"><text>企业住所</text></view>
+          <view class="group-value">{{dataObj.baseInfo.SCJYDZ}}</view>
+        </view>
+        <view class="group-item">
+          <view class="group-label"><text>企业法人</text></view>
+          <view class="group-value">{{dataObj.baseInfo.FDDBRMC}}</view>
+        </view>
+        <view class="group-item">
+          <view class="group-label"><text>成立日期</text></view>
+          <view class="group-value">{{dataObj.baseInfo.DJRQ}}</view>
+        </view>
+        <view class="group-item">
+          <view class="group-label"><text>工商注册号</text></view>
+          <view class="group-value">{{dataObj.baseInfo.GSZCH}}</view>
+        </view>
+        <view class="group-item" style="border-bottom: none;">
+          <view class="group-label"><text>组织机构代码</text></view>
+          <view class="group-value">{{dataObj.baseInfo.ZZJGDM}}</view>
+        </view>
+      </view>     
+    </view> 
+
+    <view class="panel-block">
+      <view class="panel-title">
+        <image src="../../images/report-img/title-img02.png" mode="aspectFit" />
+      </view>
+      <!-- <view class="evaluate-box">
+        <text>偿债能力总评价</text>
+        <image src="../../images/report-img/star-icon.png" mode="aspectFit" />
+        <text>(满五星)</text>
+      </view> -->
+      <!-- <view class="cut-off-line">
+        <image src="../../images/report-img/cut-off-line.png" mode="aspectFit" />
+      </view> -->
+      <view class="container">
+        <canvas
+          id="manger-shapeChart"
+          width="{{width01}}" height="{{height01}}"
+        />
+      </view>
+    </view>
+
+    <view class="panel-block">
+      <view class="panel-title">
+        <image src="../../images/report-img/title-img03.png" mode="aspectFit" />
+      </view>
+      <view  a:if="{{earnProfitDisplay}}">
+        <view class="container" >
+          <canvas
+            id="earnProfit-lineChart"
+            width="{{width02}}" height="{{height02}}"
+          />
+        </view>
+        <view class="chart-text" >{{earnProfitText}}</view>
+      </view>
+      <view a:else>
+        <view class="container-text chart-text">{{earnProfitText}}</view>
+      </view>
+    </view>
+
+    <view class="panel-block">
+      <view class="panel-title">
+        <image src="../../images/report-img/title-img04.png" mode="aspectFit" />
+      </view>
+      <view class="container">
+        <canvas
+          id="performance-shapeChart"
+          width="{{width03}}" height="{{height03}}"
+        />
+      </view>
+    </view>
+
+    <view class="panel-block">
+      <view class="panel-title">
+        <image src="../../images/report-img/title-img05.png" mode="aspectFit" />
+      </view>
+      <view a:if="{{growUpDisplay}}">
+        <view class="container"  >
+        <canvas
+            id="growUp-lineChart"
+            width="{{width04}}" height="{{height04}}"/>
+        </view>
+        <view class="chart-text">{{growUpText}}</view>
+      </view>
+      <view a:else>
+        <view class="container-text chart-text">{{growUpText}}</view>
+      </view>
+    </view> 
+  </view>
+
+ 
+
+</view>

@@ -1,0 +1,3 @@
+<view>
+  <web-view src="alipays://platformapi/startapp?appId=66666883" ></web-view>
+</view>

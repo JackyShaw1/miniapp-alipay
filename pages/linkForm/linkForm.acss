@@ -1,0 +1,64 @@
+.page{
+  width: 100%;
+  position: relative;
+  background: #f6f6f6;
+}
+
+.form-box{
+  margin: 20rpx;
+}
+
+.form-top,.form-down{
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+
+.product-icon{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+}
+
+.product-icon>image{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+
+.input-group{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #cccccc;
+}
+
+
+.input-group .input-label{
+  width: 240rpx;
+}
+.input-group .input-label text{
+  border-left: 4rpx solid #c4182e;
+  padding-left: 20rpx;
+  margin-left: 10rpx;
+}
+
+.input-group>input{
+  flex: 1;
+  height: 80rpx;
+  font-size: 26rpx;
+  background: transparent;
+}
+
+.submitBtn{
+  width:80%;
+  height: 91rpx;
+  margin: 0 auto;
+  line-height: 91rpx;
+  background: linear-gradient(to right, #c5192e, #fc6d4e);
+  border-radius: 10rpx;
+  box-shadow: 0px 5px 10px rgba(255,82,22,0.26);
+  color: #fff;
+}

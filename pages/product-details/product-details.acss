@@ -1,0 +1,91 @@
+.page{
+  width: 100%;
+  position: relative;
+  background: #f5f5f5;
+}
+.header{
+  height: 200rpx;
+  padding: 20rpx;
+}
+
+.banner-wrap{
+  padding: 30rpx;
+  background: linear-gradient(to right, #e5303c , #f8634a);
+  display: flex;
+  border-radius: 8rpx;
+}
+
+.icon-wrap{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 20rpx;
+}
+.icon-wrap>image{
+  width: 100%;
+  height: 100%;
+  border: 8rpx solid #fff;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+.banner-right{
+  flex: 1;
+  color: #fff;
+}
+
+.companyName-title{
+  height: 60rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.finance-lease{
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border: 1rpx solid #fff;
+  border-radius: 6rpx;
+  background: linear-gradient(to right, #ef4b44 , #e5333d);
+}
+
+.box-wrap{
+  margin: 20rpx;
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.box-title{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  border-left: 4rpx solid #c4182d;
+  margin-bottom: 30rpx;
+}
+.box-content view{
+  line-height: 40rpx;
+}
+.box-content text{
+  color: #c4182d;
+  padding-right: 8rpx;
+}
+
+.box-content image{
+  width: 100%;
+  height: 160rpx;
+}
+
+.lookBtn{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background: linear-gradient(to right, #d0323f , #fe5029);
+  color: #fff;
+}
+
+ .lookBtn:active{
+  background:  #fe5029;
+}

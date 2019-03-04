@@ -1,0 +1,4 @@
+<view>
+    <!-- <button type="primary" onTap="clickTap">Button</button> -->
+  <web-view src="{{url}}" onMessage="handlerMessage"></web-view>
+</view>

@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="success-icon">
+    <image src="../../images/home-img/success.png" mode="aspectFit" />
+  </view>
+  <view class="sucess-info">
+    <view class="companyName">{{companyName}}</view>
+    <view class="success-tip">恭喜认证成功!</view>
+  </view>
+  <view class="btn-area">
+      <!-- <navigator url="/pages/assess/assess?nsrsbh={{nsrsbh}}&companyName={{companyName}}">
+        <view class="assess-btn" hover-class="assess-btn-hover">查看报告</view>
+      </navigator> -->
+    <view class="preview-btn" hover-class="preview-btn-hover" onTap="getReportHandler">查看报告</view>
+  </view>
+</view>

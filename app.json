@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/auth/auth",
+    "pages/fail/fail",
+    "pages/success/success",
+    "pages/assess/assess",
+    "pages/linkForm/linkForm",
+    "pages/reportPage/reportPage",
+    "pages/product-details/product-details",
+    "pages/wangshangPage/wangshangPage"
+  ],
+  "window": {
+    "defaultTitle": "征信+"
+  },
+  "tabBar": {
+    "textColor": "#606060",
+    "selectedColor": "#e0423e",
+    "backgroundColor": "#F5F5F9",
+    "items": [
+      {
+        "pagePath": "pages/home/home",
+        "icon": "images/tabbar/home1.png",
+        "activeIcon": "images/tabbar/home2.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "icon": "images/tabbar/me1.png",
+        "activeIcon": "images/tabbar/me2.png",
+        "name": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

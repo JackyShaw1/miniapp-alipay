@@ -1,0 +1,50 @@
+<view class="page">
+  <view class="form-box">
+    <form onSubmit="formSubmit" onReset="formReset">
+      <view class="form-top">
+        <view class="product-icon">
+            <image src="../../images/assess-img/yuandong-icon.png" mode="aspectFit" />
+        </view>
+        <view class="input-group">
+          <view class="input-label"><text>企业名称</text></view>
+          <input name="companyName" maxlength='30'  placeholder="请输入企业名称" />
+        </view>
+        <view class="input-group">
+          <view class="input-label"><text>纳税人识别号</text></view>
+          <input name="nsrsbh" maxlength='30'  placeholder="请输入纳税人识别号" />
+        </view>
+        <view class="input-group">
+          <view class="input-label"><text>法人姓名</text></view>
+          <input name="userName" maxlength='30'  placeholder="请输入纳税人识别号" />
+        </view>
+        <view class="input-group" style="border-bottom: none;">
+          <view class="input-label"><text>法人电话号码</text></view>
+          <input name="phoneNum" maxlength='30'  placeholder="请输入纳税人识别号" />
+        </view>
+      </view>
+      <view class="form-down">
+        <view class="input-group">
+          <view class="input-label"><text>具体需求</text></view>
+          <picker onChange="bindObjPickerChange01" value="{{arrIndex01}}" range="{{arr01}}" range-key="name">
+            <view class="row">
+              <view class="row-extra">{{arr01[arrIndex01].name}}</view>
+            </view>
+          </picker>
+        </view>
+        <view class="input-group">
+          <view class="input-label"><text>申请金额</text></view>
+          <input name="moneyNum" maxlength='30'  placeholder="输入值最低300万元 " />
+        </view>
+        <view class="input-group">
+          <view class="input-label"><text>申请年限</text></view>
+          <picker onChange="bindObjPickerChange02" value="{{arrIndex02}}" range="{{arr02}}" range-key="name">
+            <view class="row">
+              <view class="row-extra">{{arr02[arrIndex02].name}}</view>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <button class="submitBtn" formType="submit">立即申请</button>
+    </form>  
+  </view>
+</view>

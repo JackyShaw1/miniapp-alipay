@@ -1,0 +1,14 @@
+<view class="page">
+  <view class="fail-icon">
+    <image src="../../images/home-img/defeat.png" mode="aspectFit" />
+  </view>
+  <view class="fail-info">
+    <view class="fail-tip">企业身份认证失败</view>
+  </view>
+
+  <view class="btn-area">
+      <navigator url="../home/home">
+        <view class="agin-btn" hover-class="agin-btn-hover">重新认证</view>
+      </navigator>
+  </view>
+</view>

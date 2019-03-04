@@ -1,0 +1,105 @@
+<view class="page">
+  <!-- 没有企业授权 -->
+  <view a:if="{{!isAuthStatus}}">
+    <view class="vz-banner"></view>
+    <view  class="bank-list">
+      <block a:for={{bankList}} a:for-item="item" a:for-index="index">
+          <view class="bank-item">
+            <image src="../../images/home-img/{{item.thumb}}" mode="aspectFit" />
+            <view>{{item.title}}</view>
+          </view>
+      </block>
+    </view>
+    <view class="selectArea-wrap">
+      <view class="auth-title">电子税局共享认证</view>
+      <view class="select-area-title">
+        <view class="select-area-text">
+          <text>请选择服务区域</text>
+        </view>
+      </view>
+      <view class="area-list clearfix">
+        <block a:for={{cityList}} a:for-item="item" a:for-index="index">
+          <view onTap="clickCityHandle" 
+                data-provinceCode="{{item.provinceCode}}" 
+                data-cityCode="{{item.cityCode}}" 
+                class="area-item">
+                {{item.areaName}}
+              </view>
+        </block>
+      </view>
+      <view class="more-btn" onTap="taxAuth" >
+        <text>更多</text>
+        <view class="down-arrow"></view>
+      </view>
+    </view>
+    <view class="home-lookReportBtn" hover-class="lookReportBtn-hover" onTap="taxAuth">
+        查看报告
+    </view>
+  </view>
+  <!-- 有授权信息 -->
+  <view a:else>
+    <view class="hander">
+      <view class="title">我的企业评级</view>
+      <view class="rank-img">
+        <canvas
+            id="dashBored-chart"
+            width="{{width00}}" height="{{height00}}"
+        />
+      </view>
+      <view class="lookReportBtn" onTap="lookReportHander">
+        查看报告
+      </view>
+    </view>
+    <view class="product-wrap">
+      <view class="product-list">
+        <view class="product-item">
+          <view class="titel-wrap">
+            <image src="../../images/assess-img/product01-icon.png" mode="aspectFit" />
+            <text class="product-name">智能信贷</text>
+            <text class="product-exeplain">银行信贷 精准推荐</text>
+          </view>
+          <view class="content-wrap">
+            <view class="cont-logo">
+              <image src="../../images/assess-img/wangshang-icon.png" mode="aspectFit" />
+              <view>网商银行</view>
+            </view>
+            <view class="cont-context">
+              <view class="cont-context-title">有税贷更多</view>
+              <view class="advantage">最短12个月</view>
+              <view class="advantage">日利率低至0.003%</view>
+            </view>
+            <view class="cont-tag">
+              <view>审批快</view>
+              <view>利率低</view>
+              <view>线上申请 实时放款</view>
+            </view>
+          </view>
+          <view class="applyNowBtn" onTap="wsClickHandle" hover-class="className">立即申请</view>
+        </view>
+        <view class="product-item">
+          <view class="titel-wrap">
+            <image src="../../images/assess-img/product02-icon.png" mode="aspectFit" />
+            <text class="product-name">融资租赁</text>
+            <text class="product-exeplain">满足企业旧设备融资和租赁新设备的需求</text>
+          </view>
+          <view class="content-wrap">
+            <view class="cont-logo">
+              <image src="../../images/assess-img/yuandong-icon.png" mode="aspectFit" />
+              <view>远东宏信</view>
+            </view>
+            <view class="cont-context">
+              <view class="cont-context-title">有税贷更多</view>
+              <view class="advantage">期限长达五年</view>
+              <view class="advantage">设备融资比例高达100%</view>
+            </view>
+            <view class="cont-tag">
+              <view>无需担保抵押</view>
+            </view>
+          </view>
+          <navigator class="applyNowBtn" url="/pages/product-details/product-details" redirect hover-class="className">立即查看</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+ 
+</view>

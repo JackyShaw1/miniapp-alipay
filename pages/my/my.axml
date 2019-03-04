@@ -1,0 +1,98 @@
+<view class="page">
+
+  <view class="header-wrap">
+    <view class="header-info">
+      <view class="header-left">
+        <image src="{{userInfo.avatar}}" mode="aspectFit" />
+      </view>
+      <view class="header-right">
+        <view class="userName"><text>{{userInfo.nickName}}</text></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 认证信息 -->
+  <view class="panel">
+    <view class="panel-title">
+      <image src="../../images/my-img/icon001.png" mode="aspectFit" />
+      <text>认证信息</text>
+    </view>
+    <block a:if="{{listData.length}}">
+      <view class="panel-item">
+        <view class="panel-item-label">公司名称</view>
+        <view class="panel-item-value">{{listData[0].companyName}}</view>
+      </view>
+      <view class="panel-item">
+        <view class="panel-item-label">纳税人识别号</view>
+        <view class="panel-item-value">{{listData[0].nsrsbh}}</view>
+      </view>
+    </block>
+    <block a:else style="margin-bottom: 20rpx;">
+      <navigator url="/pages/home/home" open-type="switchTab" hover-class="other-navigator-hover">
+        <view hover-class="item-hover" class="btn">没有认证信息请到首页认证</view>
+      </navigator>
+    </block>
+  </view>
+  <block a:if="{{listData.length}}">
+     <!-- 报告信息 -->
+    <view class="panel">
+      <view class="panel-title">
+        <image src="../../images/my-img/icon002.png" mode="aspectFit" />
+        <text>报告信息</text>
+      </view>
+
+      <view> 
+        <block a:for={{listData}} a:index={{index}} >
+          <swipe-action
+            index="{{index}}"
+            nsrsbh="{{item.nsrsbh}}"
+            right="{{right1}}"
+            onRightItemClick="onRightItemClick"
+            onSwipeStart="onSwipeStart"
+            extra="item1">
+            <view  data-nsrsbh="{{item.nsrsbh}}"
+              data-companyName="{{item.companyName}}"
+              onTap="companyHandler">
+              <list-item 
+                arrow="horizontal" 
+                index="{{index}}" 
+                key="item-{{index}}">
+                {{item.companyName}}
+              </list-item>
+            </view>
+          </swipe-action>
+        </block>
+      </view>
+    </view>
+
+    <!-- 产品申请记录 -->
+    <view class="panel">
+      <view class="panel-title">
+        <image src="../../images/my-img/icon003.png" mode="aspectFit" />
+        <text>产品申请记录</text>
+      </view>
+      <view class="panel-item product-item" hover-class="item-hover">
+        <view class="product-name title"><text>产品名称</text></view>
+        <view class="applyFor-time title"><text>时间</text></view>
+        <view class="applyFor-status title"><text>状态</text></view>
+      </view>
+      <view class="panel-item product-item" hover-class="item-hover">
+        <view><text>网商银行网商贷</text></view>
+        <view><text>2018/10/08</text></view>
+        <view><text>成功</text></view>
+      </view>
+      <view class="panel-item product-item" hover-class="item-hover">
+        <view><text>税e贷</text></view>
+        <view><text>2018/8/08</text></view>
+        <view><text>成功</text></view>
+      </view>
+    </view>
+  </block>
+  <!-- 客服电话 -->
+
+  <view class="btn" style="margin: 0rpx 40rpx;" onTap="makePhoneCall"  hover-class="item-hover" >
+    <image src="../../images/my-img/phone-icon.png" mode="aspectFit" />
+    <text style="padding: 0rpx 10rpx;">客服电话</text>
+    <text>4008036188</text>
+  </view>
+</view>
